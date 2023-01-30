@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using BurgerTemplateMethod.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<BurgerTemplateMethodContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BurgerTemplateMethodContext") ?? throw new InvalidOperationException("Connection string 'BurgerTemplateMethodContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

@@ -3,6 +3,10 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Bienvenido al registro de hamburguesas con template Method  Por Juan Herrera</h1>
+    <p>El template method se usa al crear una clase base (Burger) que tiene un algoritmo o metodo plantilla (template Method que en este caso es el cotrolador) y cuyas subclases heredan y personalizan (Americanas, Hawaianas, Rancheras)</p>
+    <div class="form-group">
+        <a asp-action="Create" asp-controller="Burgers" class="btn btn-primary">Registra una hamburguesa</a>
+    </div>
+    <p>Por favor recordar configurar el servidor de base de datos en el archivo appsettings.json para que la app web funcione correctaente. gracias </p>
 </div>
